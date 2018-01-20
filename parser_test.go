@@ -74,7 +74,6 @@ func TestGetUnicodeValueRangeInvalidIncludeLastValueNotHexadecimal(t *testing.T)
 	}
 }
 
-
 //
 // EXCLUDE VALUE TESTS
 //
