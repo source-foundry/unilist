@@ -26,7 +26,7 @@ const (
    $ unilist (options) [arg 1]...[arg n]
 
  Default:
-   Write a space glyph delimited list of Unicode code point values
+   Write a list of Unicode code point values delimited by space glyphs
 
  Options:
   -c, --comma          Use comma delimiter
@@ -36,11 +36,13 @@ const (
   -v, --version        Application version
 
  Notes:
-   arg values should be defined as single Unicode hexadecimal code 
-   point values, or ranges that are indicated with a '-' between 
-   values. Exclude hexadecimal values from output by using a 
-   case-insensitive 'x' as the first character of the value or the 
-   range (e.g., x0020 or x0020-0024)
+   Define arg values as single Unicode hexadecimal code point
+   values or as ranges that are indicated with a '-' between 
+   values (e.g., 0020 or 0020-0024). 
+
+   Exclude hexadecimal values from output by using a 
+   case-insensitive 'x' as the first character of the single
+   Unicode code point arg or range arg (e.g., x0020 or x0020-0024)
 `
 )
 
