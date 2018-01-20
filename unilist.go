@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	version = "0.2.0"
+	version = "0.3.0"
 
 	usage = `Usage: unilist (options) [arg 1]...[arg n]
 `
@@ -26,6 +26,7 @@ const (
 
  Default:
    Write a list of Unicode code point values delimited by space glyphs
+   to the standard output stream
 
  Options:
   -c, --comma          Use comma delimiter
@@ -85,7 +86,7 @@ func main() {
 	var keepUniList []string
 	var removeUniList []string
 
-	// create exclude unicode value slice
+	// create exclude Unicode value slice
 	for _, remArg := range flag.Args() {
 		if strings.HasPrefix(remArg, "x") || strings.HasPrefix(remArg, "X") {
 			tempRemoveSlice, err := getUnicodeValueSlice(remArg)
@@ -98,6 +99,7 @@ func main() {
 		}
 	}
 
+	// create include Unicode value slice, taking into account above excluded values
 	for _, keepArg := range flag.Args() {
 		if !strings.HasPrefix(keepArg, "x") || strings.HasPrefix(keepArg, "X") {
 			tempKeepSlice, err := getUnicodeValueSlice(keepArg)
