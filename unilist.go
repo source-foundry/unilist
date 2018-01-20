@@ -36,10 +36,11 @@ const (
   -v, --version        Application version
 
  Notes:
-   arg values should be single Unicode hexadecimal code point values,
-   or ranges that are indicated with a '-' between values. Exclude
-   hexadecimal values from output by using a case-insensitive 'x'
-   as the first character of the value or the range (e.g., x0020)
+   arg values should be defined as single Unicode hexadecimal code 
+   point values, or ranges that are indicated with a '-' between 
+   values. Exclude hexadecimal values from output by using a 
+   case-insensitive 'x' as the first character of the value or the 
+   range (e.g., x0020 or x0020-0024)
 `
 )
 
