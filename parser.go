@@ -14,13 +14,13 @@ func getUnicodeValueSlice(arg string) ([]string, error) {
 	}
 	if strings.Contains(arg, "-") {
 		tempUniList := strings.Split(arg, "-")
-		startInt, startErr := strconv.ParseInt(tempUniList[0], 16, 32)
-		endInt, endErr := strconv.ParseInt(tempUniList[1], 16, 32)
-		if startErr != nil {
-			return returnSlice, startErr
+		startInt, startParseErr := strconv.ParseInt(tempUniList[0], 16, 32)
+		endInt, endParseErr := strconv.ParseInt(tempUniList[1], 16, 32)
+		if startParseErr != nil {
+			return returnSlice, startParseErr
 		}
-		if endErr != nil {
-			return returnSlice, endErr
+		if endParseErr != nil {
+			return returnSlice, endParseErr
 		}
 		for i := startInt; i <= endInt; i++ {
 			returnSlice = append(returnSlice, fmt.Sprintf("%U", i))
