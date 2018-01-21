@@ -15,6 +15,8 @@
 
 # Goland
 .idea
+.cache
 
 # builds
 dist/
+unilist
