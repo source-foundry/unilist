@@ -74,6 +74,24 @@ func TestGetUnicodeValueRangeInvalidIncludeLastValueNotHexadecimal(t *testing.T)
 	}
 }
 
+
+func TestGetUnicodeValueRangeInvalidIncludeTooShortStart(t *testing.T) {
+	testArg := "20-0030"
+	_, err := getUnicodeValueSlice(testArg)
+	if err == nil {
+		t.Errorf("[FAIL] Expected error for invalid hexadecimal string and received no error")
+	}
+}
+
+
+func TestGetUnicodeValueRangeInvalidIncludeTooShortEnd(t *testing.T) {
+	testArg := "0020-30"
+	_, err := getUnicodeValueSlice(testArg)
+	if err == nil {
+		t.Errorf("[FAIL] Expected error for invalid hexadecimal string and received no error")
+	}
+}
+
 //
 // EXCLUDE VALUE TESTS
 //

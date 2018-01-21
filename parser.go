@@ -14,6 +14,16 @@ func getUnicodeValueSlice(arg string) ([]string, error) {
 	}
 	if strings.Contains(arg, "-") {
 		tempUniList := strings.Split(arg, "-")
+		if len(tempUniList[0]) < 4 {
+			// handle argument that is not formatted as unicode hexadecimal value
+			lenErr := fmt.Errorf("the argment '%s' is not properly formatted as a Unicode hexadecimal value", tempUniList[0])
+			return returnSlice, lenErr
+		}
+		if len(tempUniList[1]) < 4 {
+			// handle argument that is not formatted as unicode hexadecimal value
+			lenErr := fmt.Errorf("the argment '%s' is not properly formatted as a Unicode hexadecimal value", tempUniList[1])
+			return returnSlice, lenErr
+		}
 		startInt, startParseErr := strconv.ParseInt(tempUniList[0], 16, 32)
 		endInt, endParseErr := strconv.ParseInt(tempUniList[1], 16, 32)
 		if startParseErr != nil {
