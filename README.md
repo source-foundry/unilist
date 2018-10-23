@@ -1,9 +1,9 @@
 # unilist
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/04e2384682014f69b7d63350a8a8ff85)](https://app.codacy.com/app/SourceFoundry/unilist?utm_source=github.com&utm_medium=referral&utm_content=source-foundry/unilist&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://semaphoreci.com/api/v1/sourcefoundry/unilist/branches/master/badge.svg)](https://semaphoreci.com/sourcefoundry/unilist)
 [![Build status](https://ci.appveyor.com/api/projects/status/c79jc4vl9jbiki0g/branch/master?svg=true)](https://ci.appveyor.com/project/chrissimpkins/unilist/branch/master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/source-foundry/unilist)](https://goreportcard.com/report/github.com/source-foundry/unilist)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/04e2384682014f69b7d63350a8a8ff85)](https://app.codacy.com/app/SourceFoundry/unilist)
 
 unilist is a command line executable that writes lists of Unicode code points out to the standard output stream.  It supports space-, comma-, and newline-delimited lists of Unicode code points that are defined with inclusion and exclusion arguments.  The application was developed to support the creation of Unicode code point lists for use with font subsetting tools.
 
